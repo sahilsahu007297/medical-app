@@ -1,0 +1,5 @@
+# Medical illustration
+
+`lungs-premium.png` was created with the built-in image generation tool for this application. It is an illustrative render, not an individual user's scan.
+
+Prompt: Create a premium medical application raster illustration asset, not a UI mockup: an isolated anatomically recognizable pair of human lungs in anterior view, centered, with the trachea extending upward. Sophisticated 3D medical visualization, luminous translucent cyan and cobalt blue lung tissue with intricate fine branching coral red and warm cream pulmonary vessels, pink-beige ringed trachea and bronchi, polished high fidelity render. Realistic organ proportions and form; delicately translucent surface, beautifully detailed vascular branches. Soft studio light, very subtle grounding shadow. Portrait composition with generous clean negative space around the entire organs, fully visible and not cropped. Pure white background, no text, no labels, no UI, no people, no watermarks. Designed as a hero graphic for a white and black luxury cardiopulmonary health app.
