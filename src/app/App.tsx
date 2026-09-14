@@ -206,31 +206,17 @@ const moodData = [3, 4, 2, 5, 4, 3, 4].map((v, i) => ({ d: DAYS[i], v }));
 /* ============================ Phone shell ============================ */
 function PhoneShell({ children, offline }: { children: React.ReactNode; offline?: boolean }) {
   return (
-    <div className="min-h-screen w-full grid place-items-center bg-[#b8cbb9] p-0 sm:p-8">
-      <div className="relative w-full max-w-[430px]">
-        <div className="relative rounded-[48px] bg-white/45 p-[6px] shadow-[0_50px_90px_-30px_rgba(35,67,48,0.42)] backdrop-blur">
-          <div className="relative h-[820px] max-h-[86vh] w-full overflow-hidden rounded-[42px]"
-            style={{ background: "radial-gradient(circle at 12% 18%,rgba(255,255,255,.8),transparent 26%), linear-gradient(145deg,#e9f1e8 0%,#dce9dc 55%,#c9ddca 100%)" }}>
-            <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full border border-white/40 opacity-60" />
-            <div className="pointer-events-none absolute -left-28 bottom-16 h-80 w-80 rounded-full border border-white/35 opacity-60" />
-            <div className="absolute left-1/2 top-2.5 z-40 h-6 w-28 -translate-x-1/2 rounded-full bg-black/85" />
-            <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-7 pt-3.5 text-[13px] font-semibold text-foreground/70">
-              <span>9:41</span>
-              <div className="flex items-center gap-1.5 opacity-70">
-                <Activity size={14} /><span className="text-xs">5G</span>
-                <div className="ml-1 h-3 w-6 rounded-[3px] border border-current relative">
-                  <div className="absolute inset-0.5 right-1 rounded-[1px] bg-current" />
-                </div>
-              </div>
-            </div>
-            {offline && (
-              <div className="absolute inset-x-0 top-[46px] z-30 flex items-center justify-center gap-2 bg-foreground py-2 text-xs font-medium text-white">
-                <WifiOff size={13} /> You're offline — data will sync when reconnected
-              </div>
-            )}
-            <div className="hide-scrollbar h-full overflow-y-auto">{children}</div>
+    <div className="min-h-screen w-full overflow-hidden"
+      style={{ background: "radial-gradient(circle at 12% 18%,rgba(255,255,255,.8),transparent 26%), linear-gradient(145deg,#e9f1e8 0%,#dce9dc 55%,#c9ddca 100%)" }}>
+      <div className="relative min-h-screen w-full overflow-hidden">
+        <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full border border-white/40 opacity-60" />
+        <div className="pointer-events-none absolute -left-28 bottom-16 h-80 w-80 rounded-full border border-white/35 opacity-60" />
+        {offline && (
+          <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-center gap-2 bg-foreground py-2 text-xs font-medium text-white">
+            <WifiOff size={13} /> You're offline — data will sync when reconnected
           </div>
-        </div>
+        )}
+        <div className="hide-scrollbar relative z-10 min-h-screen overflow-y-auto">{children}</div>
       </div>
       <style>{`.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}`}</style>
     </div>
